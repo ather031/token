@@ -1,6 +1,6 @@
 # Backend
 
-Hospital Management System Backend
+JWT Token Authentication with Authorization
 
 ## Installation
 
