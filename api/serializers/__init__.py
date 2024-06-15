@@ -3,3 +3,4 @@ from .user_serializer import UserSerializer, UserUpdateSerializer
 from .role_serializer import RoleSerializer
 from .permission_serializer import PermissionSerializer
 from .change_password_serializer import ChangePasswordSerializer
+from .employee_serializer import EmployeeSerializer

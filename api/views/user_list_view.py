@@ -7,14 +7,12 @@ from api.models import Role, User
 from api.models.partof import PartOf
 from api.serializers import UserSerializer
 from rest_framework.generics import ListAPIView
-from api.util import CustomPagination
 from django.db import IntegrityError
 from api.filters import UserFilter
 
 class UserListView(ListAPIView):
     permission_classes = (IsAuthenticated, )
     serializer_class = UserSerializer
-    pagination_class = CustomPagination
     filterset_class = UserFilter
 
     @permission_required(['user_read'])

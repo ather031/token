@@ -6,12 +6,10 @@ from rest_framework.permissions import IsAuthenticated
 from api.models import Role, Permission
 from django.db import transaction
 from rest_framework.generics import ListAPIView
-from api.util import CustomPagination
 from api.filters import RoleFilter
 
 class RoleListView(ListAPIView):
     permission_classes = (IsAuthenticated, )
-    pagination_class = CustomPagination
     serializer_class = RoleSerializer
     filterset_class = RoleFilter
 
